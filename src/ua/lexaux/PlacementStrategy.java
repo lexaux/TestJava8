@@ -13,14 +13,14 @@ public interface PlacementStrategy {
     Box placeEvent(CalendarEvent event);
 
     default PlacementStrategy padded(int padding) {
-        return (event) -> {
+        return ((CalendarEvent event) -> {
             Box box = PlacementStrategy.this.placeEvent(event);
             box.height -= 2 * padding;
             box.width -= 2 * padding;
             box.xPixels += padding;
             box.yPixels += padding;
             return box;
-        };
+        });
     }
 
     default PlacementStrategy offset(int offsetX, int offsetY) {

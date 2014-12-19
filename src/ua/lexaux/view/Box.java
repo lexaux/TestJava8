@@ -4,6 +4,7 @@ package ua.lexaux.view;
  */
 
 public class Box {
+
     public Box() {
     }
 

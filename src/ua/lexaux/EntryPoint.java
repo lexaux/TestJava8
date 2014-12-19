@@ -1,5 +1,6 @@
 package ua.lexaux;
 
+import ua.lexaux.model.CalendarEvent;
 import ua.lexaux.view.Box;
 
 import java.util.List;
@@ -37,7 +38,8 @@ public class EntryPoint {
         Stream.concat(
                 Stream.concat(placedEvents.stream(), placedEvents2.stream()), placedEvents3.stream())
                 .map(identityPrintingMapper)
-                .collect(Collectors.counting());
+                .count();
+//                SAME HERE -> .collect(Collectors.counting());
     }
 
 }

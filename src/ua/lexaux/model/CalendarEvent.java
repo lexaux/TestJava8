@@ -7,6 +7,7 @@ import java.time.LocalDateTime;
  * Event
  */
 public class CalendarEvent {
+
     private final Duration duration;
 
     private final LocalDateTime localDateTime;
